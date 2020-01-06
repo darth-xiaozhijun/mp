@@ -22,5 +22,14 @@ Page({
     this.setData({
       useData:newsData.initData
     })
+  },
+
+  getNewsDetail: function (event) {
+    // console.log("11111");
+    // console.log(event);
+    var newsId = event.currentTarget.dataset.newsid;
+    wx.navigateTo({
+      url: 'news-detail/news-detail?newsid=' + newsId,
+    })
   }
 })
