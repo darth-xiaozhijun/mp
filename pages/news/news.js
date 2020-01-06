@@ -1,4 +1,5 @@
-// pages/news/news.js
+var newsData = require("../data/newsdata.js");
+
 Page({
 
   /**
@@ -15,6 +16,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // console.log(newsData);
 
+    //this.setData可以让view重绘
+    this.setData({
+      useData:newsData.initData
+    })
   }
 })

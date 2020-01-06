@@ -13,18 +13,18 @@
 
   <view class='articlelist'>
     <view class='author-time'>
-      <image class='author-icon' src='../images/head1.png'></image>
-      <text class='author-name'>zaodao</text>
-      <text class='author-date'>2020/01/06</text>
+      <image class='author-icon' src='{{useData[0].authorIcon}}'></image>
+      <text class='author-name'>{{useData[0].authorName}}</text>
+      <text class='author-date'>{{useData[0].authorDate }}</text>
     </view>
-    <text class='title'>岁月不老，一世倾城</text>
-    <image class='article-img' src='../images/sub1.png'></image>
-    <text class='article-text'>岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城</text>
+    <text class='title'>{{useData[0].title}}</text>
+    <image class='article-img' src='{{useData[0].articleImg}}'></image>
+    <text class='article-text'>{{useData[0].articleText}}</text>
     <view class='article-like'>
       <image class='article-like-icon' src='../images/sc.png'></image>
-      <text class='article-like-text'>12</text>
+      <text class='article-like-text'>{{useData[0].articleLikeComment}}</text>
       <image class='article-like-icon' src='../images/fx.png'></image>
-      <text class='article-like-text'>30</text>
+      <text class='article-like-text'>{{useData[0].articleLikeSC}}</text>
     </view>
   </view>
 </view>
