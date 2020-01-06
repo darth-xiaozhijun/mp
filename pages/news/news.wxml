@@ -10,4 +10,21 @@
       <image src="../images/banner3.jpg"></image>
     </swiper-item>
   </swiper>
+
+  <view class='articlelist'>
+    <view class='author-time'>
+      <image class='author-icon' src='../images/head1.png'></image>
+      <text class='author-name'>zaodao</text>
+      <text class='author-date'>2020/01/06</text>
+    </view>
+    <text class='title'>岁月不老，一世倾城</text>
+    <image class='article-img' src='../images/sub1.png'></image>
+    <text class='article-text'>岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城,岁月不老，一世倾城</text>
+    <view class='article-like'>
+      <image class='article-like-icon' src='../images/sc.png'></image>
+      <text class='article-like-text'>12</text>
+      <image class='article-like-icon' src='../images/fx.png'></image>
+      <text class='article-like-text'>30</text>
+    </view>
+  </view>
 </view>
