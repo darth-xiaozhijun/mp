@@ -1,4 +1,4 @@
-// pages/news/news-detail/news-detail.js
+var newsData = require("../../data/newsdata.js");
 Page({
 
   /**
@@ -12,6 +12,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.newsid);
+    console.log(newsData.initData[options.newsid]);
   }
 })
