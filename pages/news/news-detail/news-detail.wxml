@@ -10,7 +10,8 @@
   <text class="title">{{title}}</text>
   <view class="tool">
     <view class="circle-img">
-      <image src="../../images/sc.png"></image>
+      <image catchtap="collectTap" wx:if="{{collected}}" src="../../images/sc.png"></image>
+      <image catchtap="collectTap" wx:else src="../../images/sch.png"></image>
       <image class="share-img" src="../../images/fx.png"></image>
     </view>
     <view class="horizon"></view>
