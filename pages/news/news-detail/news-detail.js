@@ -94,32 +94,29 @@ Page({
   },
 
   playerMusicTap:function(event){
+
     var that = this;
-    console.log(that);
+    //播放音乐应该判断当前音乐是否在播放
     wx.getBackgroundAudioPlayerState({
-      success: function(res){
-        console.log(res.status);
+      success: function(res) {
         var status = res.status;
         if(status != 1){
-          console.log(newsData.initData[that.data.newsid].music.dataUrl);
-          wx.playBackgroundAudio({
-            dataUrl: newsData.initData[that.data.newsid].music.dataUrl,
-            title: newsData.initData[that.data.newsid].music.title,
-            coverImgUrl:newsData.initData[that.data.newsid].music.coverImgUrl
-          })
-          that.setData({
-            isPlayer:true
-          })
+         //没有在播放
+         wx.playBackgroundAudio({
+             dataUrl: newsData.initData[that.data.newsid].music.url,
+             title:newsData.initData[that.data.newsid].music.title,
+             coverImgUrl: newsData.initData[that.data.newsid].music.coverImg
+         })
+         that.setData({
+           isPlayer:true
+         })
         }else{
-          wx.pauseBackgroundAudio({
-            complete: (res) => {},
-          })
-          that.setData({
-            isPlayer:false
-          })
+           wx.pauseBackgroundAudio();
+           that.setData({
+             isPlayer:false
+           })
         }
       }
-    })
-   
+   })
   }
 })
