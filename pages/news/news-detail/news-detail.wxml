@@ -6,6 +6,7 @@
     <text class="author-name">{{authorName}}</text>
     <text class="const-text">发表于</text>
     <text class="time">{{authorDate}}</text>
+    <image bindtap="playerMusicTap" class="playermusic" src= "{{isPlayer ? '../../images/eartphone.png' : '../../images/eartag.png'}}"></image>
   </view>
   <text class="title">{{title}}</text>
   <view class="tool">

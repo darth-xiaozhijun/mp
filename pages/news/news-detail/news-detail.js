@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    isPlayer:false
   },
 
   /**
@@ -91,5 +91,35 @@ Page({
       title: newsData.initData[this.data.newsid].title,
       path: 'pages/news/news-detail/news-detail'
     }
+  },
+
+  playerMusicTap:function(event){
+    var that = this;
+    console.log(that);
+    wx.getBackgroundAudioPlayerState({
+      success: function(res){
+        console.log(res.status);
+        var status = res.status;
+        if(status != 1){
+          console.log(newsData.initData[that.data.newsid].music.dataUrl);
+          wx.playBackgroundAudio({
+            dataUrl: newsData.initData[that.data.newsid].music.dataUrl,
+            title: newsData.initData[that.data.newsid].music.title,
+            coverImgUrl:newsData.initData[that.data.newsid].music.coverImgUrl
+          })
+          that.setData({
+            isPlayer:true
+          })
+        }else{
+          wx.pauseBackgroundAudio({
+            complete: (res) => {},
+          })
+          that.setData({
+            isPlayer:false
+          })
+        }
+      }
+    })
+   
   }
 })

@@ -1,5 +1,4 @@
-var initData = [
-  {
+var initData = [{
     "newsid": 0,
     "authorIcon": "/pages/images/head1.png",
     "authorName": "zaodao",
@@ -9,7 +8,12 @@ var initData = [
     "articleImg": "/pages/images/sub1.png",
     "articleText": "3月20日，著名博主北京冬雨在微博晒出一张相片，看完后，不得不感叹，真的是巨星云集啊！网友称这张照片汇集了当年香港半个娱乐圈的大咖，现在看起来，满满都是回忆！站在最醒目位置的是米雪，她当年凭借黄蓉一角而成名，经典作品还有《倚天屠龙记》殷素素、《溏心风暴之家好月圆》、《宫心计》等等。如今，她与相守24年的男友尹志强的恋爱故事也十分让人动容。米雪照片中还有靖哥哥黄日华，黄日华在1983版《射雕好汉传》中扮演郭靖一角而被大家所熟悉，他还有一部更经典的作品便是《天龙八部》的乔峰。黄日华为人忠实，性格与郭靖非凡很是相似。黄日华赵雅芝和周润发也在照片中出现了，当年他俩在《上海滩》中成为了绝配，提起许文强，就会想到周润发，说起冯程程，列位总会想起赵雅芝笑靥如花的模样。周润发赵雅芝此外，照片中还有成龙、陈百强、莫少聪、郑少秋、叶丽仪，陈洁灵、罗文等等，这么多大咖，你认出是谁了？曾经的一部部经典电视剧可以说陪伴了很多人成长，如今想来都是满满的回忆。而这对于电视剧的主创人员而已，也是一份美好的经历。师徒四人六小龄童、迟重瑞、刘大刚和马德华再聚首2016年12月，六小龄童先生在微博中晒出《西游记》音乐会的照片。师徒四人六小龄童、迟重瑞、刘大刚和马德华再聚首，多名优秀歌唱家、音乐家携手为观众送上一场视听盛宴。观众大赞不俗情怀，更有网友回复：“师徒四人再聚首场面好震撼！能到现场观看特别激动！”",
     "articleLikeComment": "12",
-    "articleLikeSC": "30"
+    "articleLikeSC": "30",
+    "music": {
+      "dataUrl": 'http://47.96.229.189/Mamamoo-HIP.mp3',
+      "title": 'Mamamoo-HIP',
+      "coverImgUrl": ''
+    }
   },
   {
     "newsid": 1,
@@ -23,9 +27,9 @@ var initData = [
     "articleLikeComment": "12",
     "articleLikeSC": "30",
     "music": {
-      "url": "http://iwen.wiki/sxtstu/music/sgbl.mp3",
-      "title": "时光不老,我们不散",
-      "coverImg": ""
+      "dataUrl": "http://47.96.229.189/Don't_Call_Me_Angel.mp3",
+      "title": "Don't Call Me Angel",
+      "coverImgUrl": ""
     }
   },
   {
@@ -40,9 +44,9 @@ var initData = [
     "articleLikeComment": "12",
     "articleLikeSC": "30",
     "music": {
-      "url": "http://iwen.wiki/sxtstu/music/sgbl.mp3",
-      "title": "时光不老,我们不散",
-      "coverImg": ""
+      "dataUrl": "http://47.96.229.189/%E9%87%91%E8%AF%B7%E5%A4%8F-Snapping.mp3",
+      "title": "金请夏-Snapping",
+      "coverImgUrl": ""
     }
   }
 ]
