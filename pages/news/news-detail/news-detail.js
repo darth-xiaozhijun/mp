@@ -11,7 +11,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     this.setData(newsData.initData[options.newsid]);
     // console.log(newsData.initData[options.newsid]);
@@ -26,19 +26,19 @@ Page({
     // wx.clearStorageSync();
 
     var newsCollect = wx.getStorageSync("newsCollect");
-    if (newsCollect){
+    if (newsCollect) {
       var newCollect = newsCollect[options.newsid];
       this.setData({
         collected: newCollect
       })
-    }else{
+    } else {
       var newsCollect = {};
       newsCollect[options.newsid] = false;
       wx.setStorageSync("newsCollect", newsCollect);
     }
   },
 
-  collectTap: function(event) {
+  collectTap: function (event) {
     var newsCollect = wx.getStorageSync("newsCollect");
     var newCollect = newsCollect[this.data.newsid];
     console.log(newCollect);
@@ -48,5 +48,48 @@ Page({
     this.setData({
       collected: newsCollect[this.data.newsid]
     });
+
+    wx.showToast({
+      title: newsCollect[this.data.newsid] ? '收藏成功' : '收藏失败',
+      icon: 'success',
+      duration: 800,
+      mask: true
+    })
+  },
+
+  onShowTap: function (event) {
+
+    /*
+    *
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success:function(res){
+        if(res.confirm){
+          console.log('用户点击确认')
+        }
+      }
+    })
+    */
+
+    /**
+     * 
+     */
+    wx.showActionSheet({
+      itemList: ['分享到微信', '分享到微博', '分享到QQ'],
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
+  },
+
+  onShareAppMessage:function(){
+    return {
+      title: newsData.initData[this.data.newsid].title,
+      path: 'pages/news/news-detail/news-detail'
+    }
   }
 })
